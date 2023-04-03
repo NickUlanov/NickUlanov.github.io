@@ -1,0 +1,31 @@
+import sys
+print("Welcome to Python Pizza Deliveries")
+size = input("What size pizza do you want? S, M, or L\n")
+add_peperoni = input("Do you want peperoni? Y or N\n")
+extra_cheese = input("Do you want extra cheese? Y or N\n")
+bill = 0
+if size in ['s', 'S', 'small', 'Small']:
+    bill += 15
+    if add_peperoni in ['y', 'Y', 'yes', 'Yes']:
+        bill += 2
+    if extra_cheese in ['y', 'Y', 'yes', 'Yes']:
+        bill += 1
+
+elif size in ['m', 'M', 'medium', 'Medium']:
+    bill += 20
+    if add_peperoni in ['y', 'Y', 'yes', 'Yes']:
+        bill += 3
+    if extra_cheese in ['y', 'Y', 'yes', 'Yes']:
+        bill += 1
+
+elif size in ['l', 'L', 'large', 'Large']:
+    bill += 20
+    if add_peperoni in ['y', 'Y', 'yes', 'Yes']:
+        bill += 3
+    if extra_cheese in ['y', 'Y', 'yes', 'Yes']:
+        bill += 1
+else:
+    print('Error! Try select pizza again!')
+    sys.exit()
+
+print(f'Total bill: {bill}$')
