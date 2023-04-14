@@ -1,0 +1,28 @@
+import random
+possible_сhoice = ['rock', 'paper', 'scissors']
+user_action = int(input('What do you chose? Type 0 for Rock, 1 for Paper or 2 for Scissors\n'))
+pc_action = random.choice(possible_сhoice)
+print(f'You chose {possible_сhoice[user_action]}, computer chose {pc_action}')
+if possible_сhoice[user_action] == 'rock':
+    if pc_action == 'rock':
+        print('drawn game')
+    elif pc_action == 'scissors':
+        print('You Win!))')
+    else:
+        print('You Lose')
+elif possible_сhoice[user_action] == 'paper':
+    if pc_action == 'paper':
+        print('drawn game')
+    elif pc_action == 'scissors':
+        print('You Lose!))')
+    else:
+        print('You Win')
+elif possible_сhoice[user_action] == 'scissors':
+    if pc_action == 'scissors':
+        print('drawn game')
+    elif pc_action == 'rock':
+        print('You Lose!))')
+    else:
+        print('You Win')
+
+
